@@ -237,12 +237,20 @@ input[type=submit]:hover {
  }
 
 /*Resposive addition*/
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 640px) and (min-width: 350px){
   #logo, nav {
     width: 100%;
     max-width: 640px;
   }
-  a {
+
+  nav a {
+  margin-left: 8px;
+  display: inline-block;  
+  border-left: 1px solid #efefef;
+  padding-left: 8px;
+  line-height: 15px;
+}
+   a {
     width: 30%;
     clear: both;
     text-align: center;
@@ -252,15 +260,21 @@ input[type=submit]:hover {
     max-width: 640px;
   }
   .work img, .work h3{
-    margin: 0 132px 0;
-    width: 335px;
+    margin: 0 25px 0;
+    width: 255px;
   }
 }
   @media screen and (max-width: 768px) and (min-width: 641px) {
-    .sideBar, .mainSection {
+    
+    .mainSection {
       width: 100%;
       max-width: 728px;
-      margin: 0 20px 30px; 
+    }
+    nav a {
+      margin-left: 10px;
+      display: inline-block;  
+      padding-left: 10px;
+      line-height: 15px;
     }
     header{
       margin: 0;
@@ -271,6 +285,9 @@ input[type=submit]:hover {
     }
     nav {
       width: 40%; 
+    }
+    .sideBar{
+      max-width: 100%;
     }
   }
   @media screen and (max-width: 980px) and (min-width: 769px){
@@ -284,9 +301,12 @@ input[type=submit]:hover {
      max-width: 600px;
      margin-left: 40px;
     }
+
     .sideBar{
-      margin-right: 30px;
+      margin: 0;
+      width: 100%;
     }
+   
     header{
       margin: 0;
       width: 100%;
